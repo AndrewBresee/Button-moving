@@ -13,9 +13,9 @@
 		    }
 
 		}, 1000);
-
   		}
 
+  		//changes the button to "Click!" after the button is pressed
   		$(this).html("Click!");
 
   		var num = parseInt($.trim($("#click-number").html()));
