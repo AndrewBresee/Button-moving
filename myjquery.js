@@ -2,6 +2,14 @@
 
 
   	$("#the-button").on('click', function(){
+  		if($(this).html() === "Start"){
+  			var count = $("#time-remaining").html()
+	    	var timer = setInterval(function() {
+		    $("#time-remaining").html(count--);
+		    if(count == 1) clearInterval(timer);
+		}, 1000);
+	    	
+  		}
 
   		$(this).html("Click!");
 
@@ -17,6 +25,7 @@
 
 	    $("#the-button").animate({"top": nh, "left": nw });
 
+	    
   
   	})
 
@@ -25,3 +34,4 @@
 });
 //When the page loads, the button starts off as "start"
 //When "start" is clicked, it becomes "Click!"
+//Now the button will move around the screen. But everytime the user "clicks" the timmer resets to 60
