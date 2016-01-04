@@ -6,9 +6,14 @@
   			var count = $("#time-remaining").html()
 	    	var timer = setInterval(function() {
 		    $("#time-remaining").html(count--);
-		    if(count == 1) clearInterval(timer);
+
+		    if(count == -1){
+		    	clearInterval(timer);
+		    	alert("TIMES UP!")
+		    }
+
 		}, 1000);
-	    	
+
   		}
 
   		$(this).html("Click!");
